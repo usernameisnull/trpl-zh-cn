@@ -190,7 +190,7 @@ io::stdin().read_line(&mut guess).expect("Failed to read line");
 
 对于`Result`，它的成员是`Ok`或`Err`，`Ok`表明操作成功了，同时`Ok`成员之中包含成功生成的值。`Err`意味着操作失败，`Err`之中包含操作是为什么或如何失败的信息。
 
-`Result`类型的作用是编码错误处理信息。`Result`类型的值，正如其他任何类型，拥有定义于其上的方法。`io::Result`的实例拥有[`expect`方法][expect]<!-- ignore -->可供调用。如果`io::Result`实例的值是`Err`，`expect`会导致程序崩溃并显示显示你作为参数传递给`expect`的信息。如果`io::Result`实例的值是`Ok`，`expect`会获取`Ok`中的值并原原本本的返回给你。在本例中，这个值是用户输入到标准输入中的字节的数量。
+`Result`类型的作用是编码错误处理信息。`Result`类型的值，正如其他任何类型，拥有定义于其上的方法。`io::Result`的实例拥有[`expect`方法][expect]<!-- ignore -->可供调用。如果`io::Result`实例的值是`Err`，`expect`会导致程序崩溃并显示你作为参数传递给`expect`的信息。如果`io::Result`实例的值是`Ok`，`expect`会获取`Ok`中的值并原原本本的返回给你。在本例中，这个值是用户输入到标准输入中的字节的数量。
 
 [expect]: https://doc.rust-lang.org/std/result/enum.Result.html#method.expect
 
